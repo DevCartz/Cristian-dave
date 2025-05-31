@@ -51,7 +51,7 @@ nav ul li a:hover {
 .banner {
   position: relative;
   width: 100%;
-  overflow: hidden;
+ 
 }
 
 .banner img {
@@ -70,6 +70,12 @@ nav ul li a:hover {
   margin-bottom: 10px;
 }
 
+.box {
+  width: 30%;
+  height: 300px;
+  background-color: #e01dda;
+  border-radius: 8px;
+}
 
 .boxes {
   display: flex;
@@ -77,12 +83,7 @@ nav ul li a:hover {
   padding: 20px;
   background-color: #22abdc;
 }
-.box {
-  width: 30%;
-  height: 300px;
-  background-color: #e01dda;
-  border-radius: 8px;
-}
+
 .box img{
   width: 100%;
   height:300px;
@@ -92,7 +93,6 @@ footer {
   text-align: center;
   padding: 15px;
   background-color: #231664;
-  font-size: 0.9rem;
   color: #f09cd5; ;
 }
 
@@ -107,19 +107,15 @@ footer {
 
 .form-container .form-group{
 
-    
-  
    display: flex;
     margin: 10px;
     justify-content:space-between ;
 }
 
 .form-container .form-group label{
-
     font-weight: 550;
     color: #071249;
     margin-top: 15px;
-    
 }
 .form-container .form-group textarea{
    
@@ -133,11 +129,9 @@ footer {
     select{
 
           color: rgb(156, 155, 155);
-           
 
     }
 
-   
 }
 .form-container .form-group input,textarea, select,textarea{
 
@@ -165,6 +159,7 @@ footer {
     color: rgb(9, 7, 7);
      transition: .3s;
 }
+
 
 
 
@@ -213,8 +208,8 @@ footer {
     flex: 1 1 100%;
   }
 
-  .form-group .full-width {
+  .form-group {
     text-align: center;
   }
-
+ 
 }
