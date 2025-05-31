@@ -27,13 +27,10 @@ header {
   width: 156px;
 }
 
-nav{
-  display: flex;
-   align-items: center;
-}
 
 nav ul {
- 
+  width: 100%;
+  text-align: center;
   display: flex;
   gap: 40px;
   list-style: none;
@@ -60,19 +57,16 @@ nav ul li a:hover {
 .banner img {
   width: 100%;
   height: auto;
+  
 }
 
 .welcome {
   padding: 20px;
   background-color: #22abdc;
-  
+
 }
 
 .welcome h2 {
-  margin-bottom: 10px;
-}
-
-.welcome p {
   margin-bottom: 10px;
 }
 
@@ -103,58 +97,74 @@ footer {
 }
 
 .form-container {
-  margin: auto;
-  background-color: #22abdc;
-  padding: 20px;
-  border-radius: 10px;
+
+     background:linear-gradient(rgb(186, 94, 158));
+    padding: 10px;
+    height: 110vh;
+   
 }
 
 
-.form-group {
-  flex: 1 1 48%;
-  display: flex;
-  flex-direction: column;
+.form-container .form-group{
+
+    
+  
+   display: flex;
+    margin: 10px;
+    justify-content:space-between ;
 }
 
-.form-group .full-width {
-  flex: 1 1 100%;
-  text-align: right;
+.form-container .form-group label{
+
+    font-weight: 550;
+    color: #071249;
+    margin-top: 15px;
+    
 }
-
-label {
-  font-weight: bold;
-  margin-bottom: 5px;
+.form-container .form-group textarea{
+   
+    resize: none;
+    height: 20vh;
+      
+    
 }
+.form-container .form-group {
 
-input, select, textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
+    select{
+
+          color: rgb(156, 155, 155);
+           
+
+    }
+
+   
 }
+.form-container .form-group input,textarea, select,textarea{
 
-textarea {
-  resize: vertical;
-  min-height: 100px;
+   
+    outline-color: rgb(79, 81, 84);
+    color: rgb(20, 22, 22);
+    width: 70%;
+    padding: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    border: none;
+    background-color: rgb(223, 215, 215);
+    border-radius: 5px;
+    
 }
-
-button {
-  background-color: #00ccff;
-  color: white;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 20px;
-  justify-self: end ;
+.form-container .button-container button{
+    
+   float: right;
+   border-radius: 5px;
+     background-color: rgb(249, 250, 255);
+    padding: 10px;
+    width: 100px;
+    border: none;
+    font-weight: 500;
+    color: rgb(9, 7, 7);
+     transition: .3s;
 }
-
-button:hover {
-  background-color: #106782;
-}
-
-
 
 
 
@@ -166,17 +176,29 @@ button:hover {
     flex-direction: column;
   }
 
+  nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+
   nav ul {
-    width: 84%;
     flex-direction: column;
-    text-align: center;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
   }
  
-  nav {
-  width:100%;
-  border-bottom: solid 2px #3a6aa5;
-  padding: 0;
- }
+  nav ul li {
+  border-bottom: 1px solid white;
+  width: 100%;
+}
 
   .boxes {
     flex-direction: column;
