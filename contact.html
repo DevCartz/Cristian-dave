@@ -37,87 +37,94 @@
      <form>
 
          
-            <div class="form-container">
+     <div class="form-container">
 
-            <div class="form-group">
-
-                    <label for="fname">Firstname</label>           
-                    <input type="text" id="fname" placeholder="Your Name" required>
-
-            </div>
-               
-               <div class="form-group">
-
-                     <label for="lname">Lastname</label>
-                     <input type="text" id="lname" placeholder="Your Last Name" required>
-                 
-                </div>
-
-              <div class="form-group">
-
-                    <label for="telephone">Telephone No.</label>
-                    <input type="tel" id="telephone" placeholder="Valid Format" required>
-                  
-             </div>
-
-            <div class="form-group">
-
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" placeholder="sample@gmail.com" required>
+                  <div class="form-group">
+                          <label for="fname">Firstname</label>           
+                          <input type="text" id="fname" placeholder="Your Name" required>
+                  </div>
                     
+                    <div class="form-group">
+                          <label for="lname">Lastname</label>
+                          <input type="text" id="lname" placeholder="Your Last Name" required>
+                      </div>
+
+                    <div class="form-group">
+                          <label for="telephone">Telephone No.</label>
+                          <input type="tel" id="telephone" placeholder="Valid Format" required>
+                  </div>
+
+                  <div class="form-group">
+
+                          <label for="email">E-mail</label>
+                          <input type="email" id="email" placeholder="sample@gmail.com" required>
+                          
+                        
+                      </div>
+                  <div class="form-group">
+
+                      <label for="org">Organization</label>
+                      <input type="text" id="org"  required>
+                                
+                  </div>
                   
-                </div>
-             <div class="form-group">
+                  <div class="form-group">
 
-                 <label for="org">Organization</label>
-                 <input type="text" id="org"  required>
-                           
-            </div>
+                          <label for="province">Province</label>
+                          <select name="province" id="province">
+                              <option value="" disabled selected hidden>Select Your Province</option>
+                              <option value="Davao Del Sur">Davao Del Sur</option>
+                              <option value="Davao Del Norte">Davao Del Norte</option>
+                              <option value="Davao De Oro">Davao De Oro</option>
+                              <option value="Davao Oriental">Davao Oriental</option>
+                          </select>
             
-            <div class="form-group">
+                      </div>
 
-                    <label for="province">Province</label>
-                    <select name="province" id="province">
-                         <option value="" disabled selected>Select your province</option>
-                    </select>
-      
-                </div>
+                  <div class="form-group">
 
-             <div class="form-group">
+                      <label for="city">City/Town</label>                   
+                      <select name="city" id="city">
+                            <option value="" disabled selected hidden>Select Your Municipality or City</option>
+                              <option value="Panabo City">Panabo City</option>
+                              <option value="Mati City">Mati City</option>
+                              <option value="Davao City">Davao City</option>
+                              <option value="Tagum City">Tagum City</option>
+                              <option value="Cebu City">Cebu City</option>
+                      </select>   
 
-                 <label for="city">City/Town</label>                   
-                 <select name="city" id="city">
-                     <option value="" disabled selected>Select your Municipality or city</option>
-                 </select>   
+                  </div>
 
-            </div>
+                  <div class="form-group">
 
-            <div class="form-group">
+                        <label for="Barangay">Barangay</label>
+                        <select name="Barangay" id="Barangay">
+                          <option value="" disabled selected hidden>Select Your Barangay</option>
+                            <option value="Mankilam">Mankilam</option>
+                            <option value="San Miguel">San Miguel</option>
+                            <option value="La filipina">La filipina</option>
+                            <option value="Pagsabangan">Pagsabangan</option>
+                        </select>
+                              
+                  </div>
 
-                  <label for="Barangay">Barangay</label>
-                  <select name="Barangay" id="Barangay">
-                     <option value="" disabled selected spellcheck=""">Select your Barangay</option>
-                  </select>
-                         
-            </div>
+                <div class="form-group">
 
-           <div class="form-group">
+                      <label for="Street">Street</label>
+                      <input type="text" id="Street"  required>
+                                
+                  </div>
+                    
+                  <div class="form-group">
+                          <label for="message">Message</label>
+                          <textarea name="message" id="message" placeholder="Write something....."></textarea>
+                  </div>
 
-                 <label for="Street">Street</label>
-                 <input type="text" id="Street"  required>
-                           
-            </div>
-               
-             <div class="form-group">
+                  <div class="button-container">
+                          <button onclick="Submit()">Submit</button>
+                  </div>
+      </div>
 
-                    <label for="message">Message</label>
-                    <textarea name="message" id="message" placeholder="Write something....."></textarea>
-             </div>
-
-             <div class="button-container">
-                    <button>Submit</button>
-             </div>
-                 </div>
       </form>
 
 
@@ -125,5 +132,55 @@
   <footer>
     <p>Copyright © 2025, Code and Play</p>
   </footer>
+
+
 </body>
+    <script>
+        function Submit() {
+        
+            let fname = document.getElementById("fname").value.trim();
+              let lname = document.getElementById("lname").value.trim();
+                let telephone = document.getElementById("telephone").value.trim();
+                  let email = document.getElementById("email").value.trim();
+                    let org = document.getElementById("org").value.trim();
+                      let province = document.getElementById("province").value;
+                let city = document.getElementById("city").value;
+                let barangay = document.getElementById("Barangay").value;
+                  let street = document.getElementById("Street").value.trim();
+                    let message = document.getElementById("message").value.trim();
+
+   
+              if (!fname || !lname || !telephone || !email || !org || !province ||
+              !city || !barangay || !street || !message) {
+                alert("Please fill in all the required fields.");
+                return;
+              }
+          
+          if (fname.toLowerCase() === lname.toLowerCase()) {
+            alert("First name and Last name should not be the same.");
+            return;
+          }
+
+        
+          if (province !== "Davao Del Norte" || city !== "Tagum City" || barangay !== "Mankilam") {
+            alert("Address must be: Davao Del Norte, Tagum City, Mankilam.");
+            return;
+          }
+
+        
+          if (isNaN(telephone)) {
+            alert("Telephone number must be number.");
+            return;
+          }
+
+          if (message.length < 10) {
+            alert("Message must be at least 10 characters long.");
+            return;
+          }
+
+          alert("Form submitted successfully!");
+        }
+      </script>
+
+
 </html>
